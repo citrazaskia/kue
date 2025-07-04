@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>It's Your Birthday Cake 🎂</title>
+	<link rel="shortcut icon" href="#">
+	<style>
+        body {
+            font-size: 18px;
+            font-family: 'courier'; /*"Lucida Console", Courier, monospace;*/
+            background-color: black;
+            color: white;
+        }
+        
+
+     .cake {
+            position: absolute;
+            width: 270px;
+            height: 200px;
+            top: 35%;
+            left: 50%;
+            margin-top: -70px;
+            margin-left: -125px;
+        }
+
+        .plate {
+            width: 270px;
+            height: 120px;
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+            background-color: white;
+            border-radius: 40%;
+        }
+
+        .cake > * {
+            position: absolute;
+        }
+
+        .lyr {
+            position: absolute;
+            width: 270px;
+            left: -10px;
+            height: 100px;
+            border-radius: 30%;
+            background-color: white;      
+        }
+        
+         .lyr-1 {
+            top: 10px;
+            border-radius: 30%;
+         }
+
+        .lyr-2 {
+            top: 33px;
+            border-radius: 30%;
+        }
+
+        .lyr-3 {
+            top: 66px;
+            border-radius: 10%;
+        }
+
+         .icing {
+            top: 2px;
+            left: -10px;
+            background-color: whitesmoke;
+            width: 270px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .cerry {
+            position: absolute;
+            background-color: rgb(194, 5, 5);
+            width: 20px;
+            height: 25px;
+            left: 20px;
+            border-radius: 10px 10px 10px 10px / 20px 20px 10px 10px;
+        }
+
+        .cry-1{
+            left: 30%;
+        }
+
+        .cry-2{
+            left: 52%;
+        }
+
+        .cry-4{
+            left: 75%;
+        }
+
+        .cry-5{
+            left : 8%;
+            position:relative;
+            top : 40px;
+        }
+
+         .cry-6{
+            left : 30%;
+            position:relative;
+           top : 27px;
+        }
+        
+         .cry-7{
+            left : 52%;
+            position:relative;
+            top : 3px;
+        }
+
+          .cry-8{
+            left : 75%;
+            position:relative;
+            top : -32px;
+        }
+
+        .candle {
+            background-color: white;
+            width: 40px;
+            height: 90px;
+            border-radius: 8px/ 6px;
+            top: -20px;
+            left: 40%;
+            margin-left: -8px;
+            z-index: 20;
+            box-shadow: 0 0 10px whitesmoke;
+        }
+
+         .candle1 {
+            background-color: white;
+            width: 40px;
+            height: 90px;
+            border-radius: 8px/ 6px;
+            top: -20px;
+            margin-left: -60px;
+            z-index: 20;
+            box-shadow: 0 0 10px whitesmoke;
+        }
+
+        .candle2 {
+            position:absolute;
+            background-color: white;
+            width: 40px;
+            height: 90px;
+            border-radius: 8px/ 6px;
+            top : 0.8px;
+            margin-left: 62px;
+            z-index: 20;
+            box-shadow: 0 0 10px whitesmoke;
+        }
+
+        .flame {
+            position: absolute;
+            background-color: orange;
+            width: 15px;
+            height: 35px;
+            border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+            top: -34px;
+            left: 50%;
+            margin-left: -7.5px;
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+            transform-origin: 50% 90%;
+            animation: flicker 1s ease-in-out alternate infinite;
+        }
+
+        .flame1 {
+            position: absolute;
+            background-color: orange;
+            width: 15px;
+            height: 35px;
+            border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+            top: -34px;
+            left: 50%;
+            margin-left: -67.5px;
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+            transform-origin: 50% 90%;
+            animation: flicker 1s ease-in-out alternate infinite;
+        }
+
+        .flame2 {
+            position: absolute;
+            background-color: orange;
+            width: 15px;
+            height: 35px;
+            border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+            top: -34px;
+            left: 65%;
+            margin-left: 47.5px;
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+            transform-origin: 50% 90%;
+            animation: flicker 1s ease-in-out alternate infinite;
+        }
+       
+       @keyframes flicker {
+            0% {
+                transform: skewX(5deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
+            }
+            25% {
+                transform: skewX(-5deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+            }
+            50% {
+                transform: skewX(10deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+            }
+            75% {
+                transform: skewX(-10deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+            }
+            100% {
+                transform: skewX(5deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+            }
+        }
+        
+         .button {
+            font-size: 18px;
+            font-family: 'courier';
+            color: white;
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        #blowButton {
+            background-color: rgb(182, 60, 12);
+            top: 120px;
+            position:relative;
+            width: 150px;
+            height: 30px;
+        }
+
+        #playButton {
+            background-color: burlywood;
+            top: 130px;
+            position:relative;
+            width: 150px;
+            height: 30px;
+        }
+        #cake {
+            width: 200px;
+            transition: opacity 0.5s;
+            }
+        
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        
+	</style>
+</head>
+
+    <body class="text-center">
+    <h1>IT'S YOUR BIRTHDAY CAKE</h1>
+    <br>
+    <br>
+    <br>
+
+	<div id="cakeContainer" class="cake hide-on-click">
+		<div class="plate"></div>
+		<div class="lyr lyr-1"></div>
+		<div class="lyr lyr-2"></div>
+		<div class="lyr lyr-3"></div>
+		<div class="icing"></div>
+        <div class="cerry cry-1"></div>
+        <div class="cerry cry-2"></div>
+        <div class="cerry cry-3"></div>
+        <div class="cerry cry-4"></div>
+        <div class="cerry cry-5"></div>
+        <div class="cerry cry-6"></div>
+        <div class="cerry cry-7"></div>
+        <div class="cerry cry-8"></div>
+         <div class="candle">
+        <div class="candle1"></div>
+        <div class="candle2"></div>
+		<div class="flame" id="flame"></div>
+        <div class="flame1" id="flame1"></div>
+        <div class="flame2" id="flame2"></div>
+	    </div>
+
+   
+    <button id="blowButton">Tiup Lilin</button>
+    <button id="playButton" class="hide-on-click">Ucapan Ulang Tahun</button>
+    <audio id="birthdaySong" src="https://drive.google.com/uc?export=view&id=1NBahxMENdLZcwjYWqjkAbB9llzlXnIBy"></audio>
+    <div id="message" style="display:none; font-size:2em; color:rgb(192, 130, 85); margin-top:20px; text-align:center;">
+    🎉 Selamat Ulang Tahun! 🎉
+    </div>
+    <img src="https://drive.google.com/uc?export=view&id=1gwOV5DTQt4UAv6e4-agRPSs-ROSQDeqx" alt="Foto Ulang Tahun" id="birthdayImage" style="display:none; width: 200px; border-radius: 10px;">
+
+
+<script>
+    const blowButton = document.getElementById('blowButton');
+    blowButton.addEventListener('click', function() {
+    // Hilangkan flame (matikan lilin)
+    document.getElementById('flame').style.display = "none";
+    document.getElementById('flame1').style.display = "none";
+    document.getElementById('flame2').style.display = "none";
+    
+    // Sembunyikan tombol tiup lilin
+    blowButton.style.display = "none";
+    
+    // Tampilkan tombol lanjut
+    playButton.style.display = "inline-block";
+});
+    document.getElementById('playButton').addEventListener('click', function() {
+    const song = document.getElementById('birthdaySong');
+    const message = document.getElementById('message');
+    const image = document.getElementById('birthdayImage');
+
+
+    song.play().catch(e => console.log("Autoplay blocked, klik ulang jika perlu"));
+
+    document.querySelectorAll('.hide-on-click').forEach(el => {
+        el.style.display = "none";
+    });
+
+    document.body.style.background = "white";
+    message.style.display = "block";
+    image.style.display = "block";
+
+    // Tambahkan teks baru ke halaman setelah tombol diklik
+    const newText = document.createElement('p');
+    newText.innerHTML = 
+    "HAPPY BIRTHDAY SIST 🥳🎉🎊<br>" +
+    "Sehat + bahagia selalu, panjang umur, lancar rejekinya, dan sukses!<br>" +
+    "Semoga segera dipertemukan dengan jodoh terbaik Aamiin...<br>" +
+    "Ku tunggu untuk main padel 🤣";
+    "Kue aslinya nyusul...."
+    newText.style.fontSize = "1.5em";
+    newText.style.color = "chocolate";
+    newText.style.marginTop = "20px";
+    newText.style.textAlign = "center";
+
+    document.body.appendChild(newText);
+
+    const newImage = document.createElement("img");
+    newImage.src = "foto.jpg";
+    newImage.style.width = "200px";
+    newImage.style.borderRadius = "10px";
+    newImage.style.marginTop = "20px";
+    document.body.appendChild(newImage);
+
+   
+    });
+        
+    </script>
+
+	
+</body>
+</html>
